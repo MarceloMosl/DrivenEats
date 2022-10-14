@@ -34,13 +34,36 @@ header h2{
     margin-left: 19px;
     margin-bottom: 17px;
 }
-.meal, .beverage, .options-desert{
+.meal, .beverage, .desert{
     display: flex;
     justify-content: space-between;
     overflow: hidden;
     gap: 10px;
+    overflow-x: scroll;
 }
-.options-meal{
+.meal div{
+    font-size: 16px;
+    width: 172px;
+    height: 216px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 19px;
+    background-color: white;
+    border-radius: 9px;
+
+}
+.beverage div{
+    font-size: 16px;
+    width: 172px;
+    height: 216px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 19px;
+    background-color: white;
+    border-radius: 9px;
+
+}
+.desert div{
     font-size: 16px;
     width: 172px;
     height: 216px;
@@ -66,4 +89,10 @@ footer{
     margin-top: 31px;
     position: sticky;
     bottom: 0;
+}
+.select{
+    border: 2px solid white;
+}
+.selected{
+ border-color: green;
 }

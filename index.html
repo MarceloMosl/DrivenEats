@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,32 @@
     <title>DrivenEats</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stcript" href="script.js">
 </head>
-<body>
+
+<body onclick="final()">
     <div class="all">
         <header>
             <h1>DrivenEats</h1>
             <h2>Sua comida em 6 minutos</h2>
         </header>
         <main>
-            <h2 class="principal" >Primeiro, seu prato</h2>
-            <div class="meal">
-                
-                <div class="options-meal">
+            <h2 class="principal">Primeiro, seu prato</h2>
+            <div class="meal" onclick="checarFrango()" >
+
+                <div onclick="frango1()" class="options-meal select">
                     <img src="./Assets/frango_yin_yang 1.jpg" alt="">
                     <h2>Frango Yin Yang</h2>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <spam>R$ 14,90</spam>
                 </div>
-                <div class="options-meal">
+                <div onclick="frango2()" class="frango2 select">
                     <img src="./Assets/frango_yin_yang 1.jpg" alt="">
                     <h2>Frango Yin Yang</h2>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <spam>R$ 14,90</spam>
                 </div>
-                <div class="options-meal">
+                <div onclick="frango3()" class="frango3 select">
                     <img src="./Assets/frango_yin_yang 1.jpg" alt="">
                     <h2>Frango Yin Yang</h2>
                     <p>Um pouco de batata, um pouco de salada</p>
@@ -39,79 +42,180 @@
             </div>
 
             <h2 class="principal">Agora, sua bebida</h2>
-            <div class="beverage">
-                    <div class="options-meal">
-                        <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                        <h2>Coquinha Gelada</h2>
-                        <p>Lata 350ml</p>
-                        <spam>R$ 4,90</spam>
-                    </div>
+            
+            <div class="beverage" onclick="checarBebida()" >
+                <div class="coca1 select" onclick="bebida1()">
+                    <img src="./Assets/coquinha_gelada 1.jpg" alt="">
+                    <h2>Coquinha Gelada</h2>
+                    <p>Lata 350ml</p>
+                    <spam>R$ 4,90</spam>
+                </div>
 
-                    <div class="options-meal">
-                        <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                        <h2>Coquinha Gelada</h2>
-                        <p>Lata 350ml</p>
-                        <spam>R$ 4,90</spam>
-                    </div>
-                    <div class="options-meal">
-                        <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                        <h2>Coquinha Gelada</h2>
-                        <p>Lata 350ml</p>
-                        <spam>R$ 4,90</spam>
-                    </div>
-                    <div class="options-meal">
-                        <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                        <h2>Coquinha Gelada</h2>
-                        <p>Lata 350ml</p>
-                        <spam>R$ 4,90</spam>
-                    </div>
-            </div>
-            <h2 class="principal">Por fim, sua sobremesa</h2>
-            <div class="desert">
-                <div class="options-desert">
-                    <div class="options-meal">
-                        <img src="./Assets/pudim 1.jpg" alt="">
-                        <h2>Pudim</h2>
-                        <p>Apenas pudim</p>
-                        <spam>R$ 7,90</spam>
-                    </div>
-                    <div class="options-meal">
-                        <img src="./Assets/pudim 1.jpg" alt="">
-                        <h2>Pudim</h2>
-                        <p>Apenas pudim</p>
-                        <spam>R$ 7,90</spam>
-                    </div>
-                    <div class="options-meal">
-                        <img src="./Assets/pudim 1.jpg" alt="">
-                        <h2>Pudim</h2>
-                        <p>Apenas pudim</p>
-                        <spam>R$ 7,90</spam>
-                    </div>
-                    <div class="options-meal">
-                        <img src="./Assets/pudim 1.jpg" alt="">
-                        <h2>Pudim</h2>
-                        <p>Apenas pudim</p>
-                        <spam>R$ 7,90</spam>
-                    </div>
-                    <div class="options-meal">
-                        <img src="./Assets/pudim 1.jpg" alt="">
-                        <h2>Pudim</h2>
-                        <p>Apenas pudim</p>
-                        <spam>R$ 7,90</spam>
-                    </div>
-
+                <div class="coca2 select" onclick="bebida2()">
+                    <img src="./Assets/coquinha_gelada 1.jpg" alt="">
+                    <h2>Coquinha Gelada</h2>
+                    <p>Lata 350ml</p>
+                    <spam>R$ 4,90</spam>
+                </div>
+                <div class="coca3 select" onclick="bebida3()">
+                    <img src="./Assets/coquinha_gelada 1.jpg" alt="">
+                    <h2>Coquinha Gelada</h2>
+                    <p>Lata 350ml</p>
+                    <spam>R$ 4,90</spam>
                 </div>
             </div>
+            
+            
+            <h2 class="principal">Por fim, sua sobremesa</h2>
 
-        
+
+
+            <div class="desert" onclick="checarSobremesa()" >
+                <div class="pudim1 select" onclick="seletorpudim1()">
+                    <img src="./Assets/pudim 1.jpg" alt="">
+                    <h2>Pudim</h2>
+                    <p>Apenas pudim</p>
+                    <spam>R$ 7,90</spam>
+                </div>
+
+                <div class="pudim2 select" onclick="seletorpudim2()">
+                    <img src="./Assets/pudim 1.jpg" alt="">
+                    <h2>Pudim</h2>
+                    <p>Apenas pudim</p>
+                    <spam>R$ 7,90</spam>
+                </div>
+
+                <div class="pudim3 select" onclick="seletorpudim3()">
+                    <img src="./Assets/pudim 1.jpg" alt="">
+                    <h2>Pudim</h2>
+                    <p>Apenas pudim</p>
+                    <spam>R$ 7,90</spam>
+                </div>
+
+            </div>
+
+
         </main>
-        <footer>
-            <p>Selecione os 3 itens para fechar o pedido</p>
+        <footer id="feet">
+            <p id="p1">Selecione os 3 itens para fechar o pedido</p>
         </footer>
 
 
 
     </div>
-    
+    <script>
+        const seletor = document.querySelector(".options-meal")
+        const seletor2 = document.querySelector(".frango2")
+        const seletor3 = document.querySelector(".frango3")
+
+        function frango1() {
+            seletor.classList.toggle("selected")
+            seletor2.classList.remove("selected")
+            seletor3.classList.remove("selected")
+        }
+        function frango2() {
+            seletor2.classList.toggle("selected")
+            seletor.classList.remove("selected")
+            seletor3.classList.remove("selected")
+        }
+        function frango3() {
+            seletor3.classList.toggle("selected")
+            seletor.classList.remove("selected")
+            seletor2.classList.remove("selected")
+        }
+
+        const beb = document.querySelector(".coca1")
+        const beb2 = document.querySelector(".coca2")
+        const beb3 = document.querySelector(".coca3")
+
+        function bebida1() {
+            beb.classList.toggle("selected")
+            beb2.classList.remove("selected")
+            beb3.classList.remove("selected")
+        }
+        function bebida2() {
+            beb2.classList.toggle("selected")
+            beb.classList.remove("selected")
+            beb3.classList.remove("selected")
+        }
+        function bebida3() {
+            beb3.classList.toggle("selected")
+            beb.classList.remove("selected")
+            beb2.classList.remove("selected")
+        }
+
+        const desert = document.querySelector(".pudim1")
+        const desert2 = document.querySelector(".pudim2")
+        const desert3 = document.querySelector(".pudim3")
+
+        function seletorpudim1() {
+            desert.classList.toggle("selected")
+            desert2.classList.remove("selected")
+            desert3.classList.remove("selected")
+        }
+        function seletorpudim2() {
+            desert2.classList.toggle("selected")
+            desert.classList.remove("selected")
+            desert3.classList.remove("selected")
+        }
+        function seletorpudim3() {
+            desert3.classList.toggle("selected")
+            desert.classList.remove("selected")
+            desert2.classList.remove("selected")
+        }
+
+        let pratoPrincipal = 0
+        let bebidaCoca = 0
+        let sobremesaPudim = 0
+        
+        function checarFrango() {
+            if(
+            seletor.classList.contains("selected") || 
+            seletor2.classList.contains("selected") || 
+            seletor3.classList.contains("selected")){
+                pratoPrincipal = 10
+
+            } else{
+                pratoPrincipal = -10
+                
+            }
+
+        }
+        function checarBebida(){
+            if(beb.classList.contains("selected") || beb2.classList.contains("selected") || beb3.classList.contains("selected")){
+                bebidaCoca=10}
+                else{
+                    bebidaCoca= -10
+
+                
+            }
+            }
+        function checarSobremesa() {
+            if (desert.classList.contains("selected") || 
+            desert2.classList.contains("selected") 
+            || desert3.classList.contains("selected")) {
+                sobremesaPudim = 10
+            }else{
+                sobremesaPudim= -10
+            }
+        }
+        
+
+        function final(){
+            let tst = ""
+            if(pratoPrincipal + bebidaCoca + sobremesaPudim == 30){
+                tst = document.getElementById("p1")
+                tst.innerHTML = "Finalize seu Pedido";
+                document.getElementById("feet").style.backgroundColor = ("green")
+            }else{
+                tst2 = document.getElementById("p1")
+                tst2.innerHTML = "Selecione os 3 itens para fechar o pedido";
+                document.getElementById("feet").style.backgroundColor = ("#CBCBCB")
+
+            }
+        }
+
+    </script>
 </body>
+
 </html>
