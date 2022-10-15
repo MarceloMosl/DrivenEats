@@ -11,7 +11,7 @@
     <link rel="stcript" href="script.js">
 </head>
 
-<body onclick="final()">
+<body onclick="itensSelecionados()">
     <div class="all">
         <header>
             <h1>DrivenEats</h1>
@@ -23,23 +23,23 @@
 
                 <div onclick="selectedFrango(this)" class="select">
                     <img src="./Assets/frango_yin_yang 1.jpg" alt="">
-                    <h2>Frango Yin Yang</h2>
+                    <h2 class="nomedoPrato" >Frango Yin Yang</h2>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <spam>R$ 14,90</spam>
                     <ion-icon  name="checkmark-circle"></ion-icon>
                 </div>
                 <div onclick="selectedFrango(this)" class="select">
-                    <img src="./Assets/frango_yin_yang 1.jpg" alt="">
-                    <h2>Frango Yin Yang</h2>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <spam>R$ 14,90</spam>
+                    <img width="144px" height="87px" src="./Assets/podrao.jpg" alt="">
+                    <h2 class="nomedoPrato" >Podrão de Osasco</h2>
+                    <p>um pouco de tudo</p>
+                    <spam>R$ 15.00</spam>
                     <ion-icon  name="checkmark-circle"></ion-icon>
                 </div>
                 <div onclick="selectedFrango(this)" class="select">
-                    <img src="./Assets/frango_yin_yang 1.jpg" alt="">
-                    <h2>Frango Yin Yang</h2>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <spam>R$ 14,90</spam>
+                    <img width="144px" height="87px" src="./Assets/pastel-frango-com-catupiry.jpg" alt="">
+                    <h2 class="nomedoPrato" >Pastel de Flago </h2>
+                    <p >Melhor com Caldo de cana</p>
+                    <spam>R$ 9.50</spam>
                     <ion-icon  name="checkmark-circle"></ion-icon>
                 
                 </div>
@@ -51,23 +51,23 @@
 
                 <div class="select" onclick="selectedbebida(this)">
                     <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                    <h2>Coquinha Gelada</h2>
+                    <h2 class="nomedoPrato" >Coquinha Gelada</h2>
                     <p>Lata 350ml</p>
                     <spam>R$ 4,90</spam>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="select" onclick="selectedbebida(this)">
-                    <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                    <h2>Coquinha Gelada</h2>
+                    <img width="144px" height="87px" src="./Assets/fanta.jpg" alt="">
+                    <h2 class="nomedoPrato" >Fanta Gelada</h2>
                     <p>Lata 350ml</p>
                     <spam>R$ 4,90</spam>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
                 <div class="select" onclick="selectedbebida(this)">
-                    <img src="./Assets/coquinha_gelada 1.jpg" alt="">
-                    <h2>Coquinha Gelada</h2>
-                    <p>Lata 350ml</p>
+                    <img width="144px" height="87px" src="./Assets/Pepsi.jpg" alt="">
+                    <h2 class="nomedoPrato" >Pepsi Gelada</h2>
+                    <p>Lata 350ml, pode ser Pespi?</p>
                     <spam>R$ 4,90</spam>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
@@ -81,25 +81,25 @@
             <div class="desert" onclick="checarSobremesa()">
                 <div class=" select" onclick="selecteddesert(this)">
                     <img src="./Assets/pudim 1.jpg" alt="">
-                    <h2>Pudim</h2>
+                    <h2 class="nomedoPrato" >Pudim</h2>
                     <p>Apenas pudim</p>
-                    <spam>R$ 7,90</spam>
+                    <spam>R$ 7.90</spam>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class="select" onclick="selecteddesert(this)">
-                    <img src="./Assets/pudim 1.jpg" alt="">
-                    <h2>Pudim</h2>
-                    <p>Apenas pudim</p>
-                    <spam>R$ 7,90</spam>
+                    <img width="144px" height="87px" src="./Assets/Petit Gateau.jpeg" alt="">
+                    <h2 class="nomedoPrato" >Pettie Gatue</h2>
+                    <p>Ana Maria com Sorvete</p>
+                    <spam>R$ 100.00</spam>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
                 <div class=" select" onclick="selecteddesert(this)">
-                    <img src="./Assets/pudim 1.jpg" alt="">
-                    <h2>Pudim</h2>
-                    <p>Apenas pudim</p>
-                    <spam>R$ 7,90</spam>
+                    <img width="144px" height="87px" src="./Assets/maca.jpeg" alt="">
+                    <h2 class="nomedoPrato" >Maça</h2>
+                    <p>Dieta Choice</p>
+                    <spam>R$ 3.00</spam>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
@@ -109,7 +109,7 @@
         </main>
         <footer id="feet">
             <p id="p1">Selecione os 3 itens para fechar o pedido</p>
-            <div id="finalize" class="escondido" onclick="alert()">
+            <div id="finalize" class="escondido" onclick="finalizar()">
                 <p>Finalize seu Pedido!!</p>
             </div>
         </footer>
@@ -118,6 +118,10 @@
 
     </div>
     <script>
+        let choice1 = ""
+        let choice2 = ""
+        let choice3 = ""
+
         let frangoselected = 0
         function selectedFrango(sel) {
             const frangosel = document.querySelector(".meal .selected");
@@ -127,6 +131,7 @@
             }
             sel.classList.add("selected")
             frangoselected = 10
+            choice1 = sel.querySelector(".nomedoPrato").innerHTML
         }
         let cocaselected = 0
         function selectedbebida(selbeb) {
@@ -139,6 +144,7 @@
             }
             selbeb.classList.add("selected")
             cocaselected = 10
+            choice2 = selbeb.querySelector(".nomedoPrato").innerHTML
         }
         let pudimselected = 0
         function selecteddesert(seldes) {
@@ -151,6 +157,7 @@
             }
             seldes.classList.add("selected")
             pudimselected = 10
+            choice3 = seldes.querySelector(".nomedoPrato").innerHTML
         }
 
         let pratoPrincipal = 0
@@ -185,8 +192,7 @@
             }
         }
 
-
-        function final() {
+    function itensSelecionados() {
             const tst = document.getElementById("p1")
             const tst2 = document.getElementById("finalize")
             const doc = document.getElementById("feet");
@@ -205,6 +211,11 @@
                 doc.style.cursor = ("default")
 
             }
+        }
+
+        function finalizar(){
+            alert("Seu prato principal é "+choice1 +" "+
+            ", sua bebida "+  choice2 +" "+"e sua sobremesa "+ choice3)
         }
 
     </script>
