@@ -37,7 +37,7 @@
                 </div>
                 <div onclick="selectedFrango(this)" class="select">
                     <img width="144px" height="87px" src="./Assets/pastel-frango-com-catupiry.jpg" alt="">
-                    <h2 class="nomedoPrato">Pastel de Flago </h2>
+                    <h2 class="nomedoPrato">Pastel de Frango </h2>
                     <p>Melhor com Caldo de cana</p>
                     <p class="estilo-valor">R$<span class="vlr">9.50</span></p>
                     <ion-icon name="checkmark-circle"></ion-icon>
@@ -97,6 +97,7 @@
                 <div class=" select" onclick="selecteddesert(this)">
                     <img width="144px" height="87px" src="./Assets/maca.jpeg" alt="">
                     <h2 class="nomedoPrato">Maça</h2>
+                    <p>uma opção mais saudavel</p>
                     <p class="estilo-valor">R$<span class="vlr">3.50</span></p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
@@ -119,7 +120,7 @@
                     <p id="order1"> </p>
                     <p id="price1"></p>
                 </div>
-                <div>
+                <div class="finalizador">
                     <p id="order2"> </p>
                     <p id="price2"></p>
                 </div>
@@ -130,12 +131,12 @@
                 <div class="totvs"><p>Total: </p>
                     <p>R$ <span id="vlrfinal"></span> </p></div>
             </div>
-            <div class="footer-final" onclick="whatsapp()">
-                <div onclick="whatsapp()" >
+            <div class="footer-final">
+                <div onclick="whatsapp()" class="mouse-pointer">
                     <p><p id="wpp">Tudo certo, pode pedir!</p></p>
                 </div>
             </div >
-            <div onclick="cancelar()"" class="cancelar" >Cancelar</div>
+            <div onclick="cancelar()" class="mouse-pointer" >Cancelar</div>
             </div>
         </div>
 
@@ -143,142 +144,7 @@
     
     <p id="minhaString" ><br></p>
 
-    <script>
-        let choice1 = ""
-        let choice2 = ""
-        let choice3 = ""
-        let price1 = ""
-        let price2 = ""
-        let price3 = ""
-
-        let frangoselected = 0
-        function selectedFrango(sel) {
-            const frangosel = document.querySelector(".meal .selected");
-            if (frangosel !== null) {
-                frangosel.classList.remove("selected");
-                frangoselected = -10
-            }
-            sel.classList.add("selected")
-            frangoselected = 10
-            choice1 = sel.querySelector(".nomedoPrato").innerHTML
-            price1 = sel.querySelector(".vlr").innerHTML
-        }
-        let cocaselected = 0
-        function selectedbebida(selbeb) {
-
-            const cocasel = document.querySelector(".beverage .selected");
-
-            if (cocasel !== null) {
-                cocasel.classList.remove("selected");
-                cocaselected = -10
-            }
-            selbeb.classList.add("selected")
-            cocaselected = 10
-            choice2 = selbeb.querySelector(".nomedoPrato").innerHTML
-            price2 = selbeb.querySelector(".vlr").innerHTML
-        }
-        let pudimselected = 0
-        function selecteddesert(seldes) {
-
-            const pudimsel = document.querySelector(".desert .selected");
-
-            if (pudimsel !== null) {
-                pudimsel.classList.remove("selected");
-                pudimselected = -10
-            }
-            seldes.classList.add("selected")
-            pudimselected = 10
-            choice3 = seldes.querySelector(".nomedoPrato").innerHTML
-            price3 = seldes.querySelector(".vlr").innerHTML
-        }
-
-        let pratoPrincipal = 0
-        let bebidaCoca = 0
-        let sobremesaPudim = 0
-
-        function checarFrango() {
-            if (frangoselected == 10) {
-                pratoPrincipal = 10
-            } else {
-                pratoPrincipal = -10
-            }
-        }
-        function checarBebida() {
-            if (cocaselected == 10) {
-                bebidaCoca = 10
-            }
-            else {
-                bebidaCoca = -10
-
-
-            }
-        }
-        function checarSobremesa() {
-            if (pudimselected == 10) {
-                sobremesaPudim = 10
-            } else {
-                sobremesaPudim = -10
-            }
-        }
-
-        function itensSelecionados() {
-            const tst = document.getElementById("p1")
-            const tst2 = document.getElementById("finalize")
-
-            if (pratoPrincipal + bebidaCoca + sobremesaPudim == 30) {
-                tst.classList.add("escondido")
-                tst2.classList.remove("escondido")
-
-
-            } else {
-                tst2.classList.add("escondido")
-                tst.classList.remove("escondido")
-
-            }
-        }
-
-        function finalizar() {
-            // opções
-            document.getElementById("order1").innerHTML = (choice1)
-            document.getElementById("order2").innerHTML = (choice2)
-            document.getElementById("order3").innerHTML = (choice3)
-            // valores 
-            document.getElementById("price1").innerHTML = (price1)
-            document.getElementById("price2").innerHTML = (price2)
-            document.getElementById("price3").innerHTML = (price3)
-            
-        }
-        let valorFinal1 = 0
-        function somaValores(){
-            document.getElementById("display-confirmacao").classList.remove ("escondido")
-            // parseInt, parseFloat e Number() não funcionaram de jeito nenhuma, apesar que no console do navegador estava certo, entao fiz esse 'gato'
-            price1++ 
-            price1--
-            price2++
-            price2--
-            price3++
-            price3--
-            valorFinal1 = price1 + price2 + price3
-           
-            document.getElementById("vlrfinal").innerHTML = (valorFinal1.toFixed(2))
-
-
-        }
-        function cancelar(){
-            document.getElementById("display-confirmacao").classList.add ("escondido")
-        }
-        function whatsapp(){
-            tst = `Olá, gostaria de fazer o pedido:
-    - Prato: ${choice1}   
-    - Bebida: ${choice2} 
-    - Sobremesa: ${choice3}  
-    Total: R$ ${valorFinal1.toFixed(2)}`
-
-
-        window.open("https://wa.me/5511973610831?text="+ encodeURIComponent(tst))
-        }
-         
-    </script>
+    <script src="./script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 
