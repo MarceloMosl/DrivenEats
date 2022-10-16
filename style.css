@@ -28,7 +28,7 @@ header{
     z-index: 1;
 }
 
-h1, h2, #finalize{
+h1, h2{
     font-family: "Righteous";
 }
 header h2{

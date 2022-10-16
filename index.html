@@ -45,7 +45,7 @@
                 </div>
             </div>
             <h2 class="principal">Agora, sua bebida</h2>
-    
+
             <div class="beverage" onclick="checarBebida()">
 
                 <div class="select" onclick="selectedbebida(this)">
@@ -114,35 +114,39 @@
         </footer>
         <div id="display-confirmacao" class="escondido">
             <div id="send-order">
-            <h1>Confirme seu pedido</h1>
-            <div class="confirm-order">
-                <div>
-                    <p id="order1"> </p>
-                    <p id="price1"></p>
+                <h1>Confirme seu pedido</h1>
+                <div class="confirm-order">
+                    <div>
+                        <p id="order1"></p>
+                        <p id="price1"></p>
+                    </div>
+                    <div class="finalizador">
+                        <p id="order2"></p>
+                        <p id="price2"></p>
+                    </div>
+                    <div>
+                        <p id="order3"></p>
+                        <p id="price3"></p>
+                    </div>
+                    <div class="totvs">
+                        <p>Total: </p>
+                        <p>R$ <span id="vlrfinal"></span> </p>
+                    </div>
                 </div>
-                <div class="finalizador">
-                    <p id="order2"> </p>
-                    <p id="price2"></p>
+                <div class="footer-final">
+                    <div onclick="whatsapp()" class="mouse-pointer">
+                        <p>
+                        <p id="wpp">Tudo certo, pode pedir!</p>
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <p id="order3"> </p>
-                    <p id="price3"></p>
-                </div>
-                <div class="totvs"><p>Total: </p>
-                    <p>R$ <span id="vlrfinal"></span> </p></div>
-            </div>
-            <div class="footer-final">
-                <div onclick="whatsapp()" class="mouse-pointer">
-                    <p><p id="wpp">Tudo certo, pode pedir!</p></p>
-                </div>
-            </div >
-            <div onclick="cancelar()" class="mouse-pointer" >Cancelar</div>
+                <div onclick="cancelar()" class="mouse-pointer">Cancelar</div>
             </div>
         </div>
 
     </div>
-    
-    <p id="minhaString" ><br></p>
+
+    <p id="minhaString"><br></p>
 
     <script src="./script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
